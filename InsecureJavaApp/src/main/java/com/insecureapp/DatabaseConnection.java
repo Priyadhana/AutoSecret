@@ -11,12 +11,17 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     
     // WARNING: Hardcoded database credentials - NEVER do this in production!
-    private static final String DB_HOST = "localhost";
-    private static final String DB_PORT = "3306";
-    private static final String DB_NAME = "userdb";
-    private static final String DB_USERNAME = "admin";
-    private static final String DB_PASSWORD = "secret123";
-    
+    private static final String DB_HOST = "db-prod.cluster-c9xy1us3.ap-south-1.rds.amazonaws.com";
+    private static final String DB_PORT = "5432";
+    private static final String DB_NAME = "corp_users";
+    private static final String DB_USERNAME = "app_user";
+    private static final String DB_PASSWORD = "p@ssw0rd!9e28d6f4b67e442af6c2";   // high entropy
+
+    private static final String AWS_ACCESS_KEY_ID = "ASIA5OMDTJH7WQLDMF";
+    private static final String AWS_SECRET_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
+    private static final String GCP_API_KEY = "AIzaSyA-9d7EXAMPLEKEY1234567890abcdefghi";
+    private static final String PRIVATE_KEY = "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqh...";
+    private static final String GITHUB_TOKEN = "github_pat_11ALSMM00IlnJF2sthlT_7tbEAbs4EHDCG1dGn98RniPBsNcugGhfjggyhJn9fGV6YBCHJzQHrzp";
     // WARNING: Hardcoded connection string with embedded credentials
     private static final String CONNECTION_URL = "jdbc:mysql://" + DB_HOST + ":" + DB_PORT + "/" + DB_NAME + 
                                                 "?user=" + DB_USERNAME + "&password=" + DB_PASSWORD + "&useSSL=false";
